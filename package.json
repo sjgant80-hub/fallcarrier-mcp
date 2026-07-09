@@ -1,25 +1,28 @@
 {
   "name": "@ai-native-solutions/fallcarrier-mcp",
   "version": "1.0.0",
-  "description": "FallCarrier MCP — stdio server exposing mesh-first messaging (WebRTC · LoRa · WebSocket relay) as Claude/MCP tools.",
+  "description": "fallcarrier MCP server · stdio wrapper around @ai-native-solutions/fallcarrier-sdk",
   "type": "module",
+  "main": "src/index.js",
   "bin": {
     "fallcarrier-mcp": "src/index.js"
   },
-  "main": "src/index.js",
   "files": ["src", "README.md", "LICENSE"],
-  "keywords": ["mcp", "model-context-protocol", "mesh", "webrtc", "lora", "meshtastic", "relay", "sovereign", "off-grid"],
-  "author": "AI-Native Solutions <hello@ai-nativesolutions.com>",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": ["fallcarrier", "mcp", "model-context-protocol", "ai-native-solutions"],
+  "author": "AI-Native Solutions",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/sjgant80-hub/fallcarrier-mcp.git"
   },
-  "engines": {
-    "node": ">=18"
-  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "@ai-native-solutions/fallcarrier-sdk": "^1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
